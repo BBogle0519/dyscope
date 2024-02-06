@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/item_user_info"
+            android:title="사용자 정보"
+            tools:ignore="HardcodedText" />
+
+        <item
+            android:id="@+id/item_inspect"
+            android:title="조사하기"
+            tools:ignore="HardcodedText" />
+
+        <item
+            android:id="@+id/item_viewList"
+            android:title="조회하기"
+            tools:ignore="HardcodedText" />
+
+        <item
+            android:id="@+id/item_e_today"
+            android:title="e Today"
+            tools:ignore="HardcodedText" />
+
+        <item
+            android:id="@+id/item_contact"
+            android:title="Contact"
+            tools:ignore="HardcodedText" />
+    </group>
+</menu>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.ascope_lite">
+
+    <!--INTERNET Permission-->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!--CamTest Permission-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera2"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.any"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera2.full"
+        android:required="false" />
+
+    <!--9.0(API Lv28)부터 http 지원x, usesCleartextTraffic = true 처리하여 해결 추후에 https 변경 예정-->
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ascopeicon"
+        android:label="${appLabel}"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="m">
+
+        <!--activity-->
+        <activity
+            android:name="com.example.ascope_lite.Login.LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.ascope_lite.MainActivity" />
+        <activity android:name="com.example.ascope_lite.Notice.NoticeActivity" />
+        <activity android:name="com.example.ascope_lite.Notice.NoticeDetailActivity" />
+        <activity android:name="com.example.ascope_lite.InspectionListActivity" />
+        <activity android:name="com.example.ascope_lite.Planlist.PlanListImgActivity" />
+
+        <!-- inspect activity-->
+        <activity android:name="com.example.ascope_lite.CrackInspect.CrackInspectActivity" />
+        <activity android:name="com.example.ascope_lite.CameraActivity" />
+        <activity android:name="com.example.ascope_lite.Planlist.PlanCoordinateActivity" />
+        <activity android:name="com.example.ascope_lite.Inspect_ViewList.Inspect_ViewListActivity" />
+        <activity android:name="com.example.ascope_lite.Inspect_ViewList.Inspect_ViewDetailActivity" />
+        <activity android:name="com.example.ascope_lite.UserInfoActivity" />
+        <activity android:name="com.example.ascope_lite.PlanningViewActivity" />
+
+        <!-- CamTest activity -->
+        <activity
+            android:name="com.example.ascope_lite.CamTest_v01.WebActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.example.ascope_lite.CamTest_v01.calculation.SizeCalculationCameraActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <!--배포용 패키징 시 authorusties = com.example.archtechsafety_v01.fileprovide1로 설정-->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.ascope_lite.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!--Glide https 우회용 모듈-->
+        <meta-data
+            android:name="com.example.ascope_lite.UnsafeGlideModule"
+            android:value="AppGlideModule" />
+
+    </application>
+
+</manifest>

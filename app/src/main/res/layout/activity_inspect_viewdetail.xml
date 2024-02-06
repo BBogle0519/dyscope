@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGray"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Title_logo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="65dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/app_bar2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/header_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="15dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Title_logo">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitStart"
+            android:src="@drawable/ic_list_detail"
+            tools:ignore="ContentDescription" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="7dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="등록 상세 정보"
+                android:textColor="#474C51"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Registered Details"
+                android:textColor="#00A2B0"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/circle_box_rectangle_right"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_inspectImg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/tv_jpg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="start"
+                    android:text=".jpg 형식의 파일만 지원합니다."
+                    android:textColor="#000000"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_inspectImg"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tv_crack_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="단위 (mm)"
+                    android:textColor="#ff0000"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_jpg"
+                    tools:ignore="HardcodedText" />
+
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="균열 크기"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/center_view1"
+                    app:layout_constraintStart_toStartOf="@+id/tv_crack_unit"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_crack_unit"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tv_crack_size"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="10"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/center_view1"
+                    app:layout_constraintStart_toStartOf="@+id/tv_jpg"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_crack_unit"
+                    tools:ignore="HardcodedText" />
+
+
+                <View
+                    android:id="@+id/center_view1"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_margin="5dp"
+                    android:background="#A0A4A8"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_crack_size" />
+
+
+                <TextView
+                    android:id="@+id/tv_text2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="균열 길이"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/center_view2"
+                    app:layout_constraintStart_toStartOf="@+id/tv_crack_unit"
+                    app:layout_constraintTop_toBottomOf="@+id/center_view1"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tv_crack_length"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="10"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/center_view2"
+                    app:layout_constraintStart_toStartOf="@+id/tv_crack_size"
+                    app:layout_constraintTop_toBottomOf="@+id/center_view1"
+                    tools:ignore="HardcodedText" />
+
+                <View
+                    android:id="@+id/center_view2"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_margin="5dp"
+                    android:background="#A0A4A8"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_crack_length" />
+
+                <TextView
+                    android:id="@+id/tv_text3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="조사자 ID"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/center_view3"
+                    app:layout_constraintStart_toStartOf="@+id/tv_crack_unit"
+                    app:layout_constraintTop_toBottomOf="@+id/center_view2"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tv_userid"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="test_company2"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/center_view3"
+                    app:layout_constraintStart_toStartOf="@+id/tv_crack_length"
+                    app:layout_constraintTop_toBottomOf="@+id/center_view2"
+                    tools:ignore="HardcodedText" />
+
+                <View
+                    android:id="@+id/center_view3"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_margin="5dp"
+                    android:background="#A0A4A8"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_userid" />
+
+                <TextView
+                    android:id="@+id/tv_text4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="조사 종류"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/center_view4"
+                    app:layout_constraintStart_toStartOf="@+id/tv_crack_unit"
+                    app:layout_constraintTop_toBottomOf="@+id/center_view3"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tv_type"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="박리"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/center_view4"
+                    app:layout_constraintStart_toStartOf="@+id/tv_userid"
+                    app:layout_constraintTop_toBottomOf="@+id/center_view3"
+                    tools:ignore="HardcodedText" />
+
+                <View
+                    android:id="@+id/center_view4"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_margin="5dp"
+                    android:background="#A0A4A8"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_type" />
+
+                <TextView
+                    android:id="@+id/tv_text5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="측정 위치"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/center_view5"
+                    app:layout_constraintStart_toStartOf="@+id/tv_crack_unit"
+                    app:layout_constraintTop_toBottomOf="@+id/center_view4"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tv_zone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="zone(내부)"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/center_view5"
+                    app:layout_constraintStart_toStartOf="@+id/tv_type"
+                    app:layout_constraintTop_toBottomOf="@+id/center_view4"
+                    tools:ignore="HardcodedText" />
+
+                <View
+                    android:id="@+id/center_view5"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_margin="5dp"
+                    android:background="#A0A4A8"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_zone" />
+
+                <TextView
+                    android:id="@+id/tv_text6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="측정 상세 위치"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/center_view6"
+                    app:layout_constraintStart_toStartOf="@+id/tv_crack_unit"
+                    app:layout_constraintTop_toBottomOf="@+id/center_view5"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tv_position"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="position(천장)"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/center_view6"
+                    app:layout_constraintStart_toStartOf="@+id/tv_zone"
+                    app:layout_constraintTop_toBottomOf="@+id/center_view5"
+                    tools:ignore="HardcodedText" />
+
+                <View
+                    android:id="@+id/center_view6"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_margin="5dp"
+                    android:background="#A0A4A8"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_position" />
+
+                <TextView
+                    android:id="@+id/tv_text7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="비 고"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/center_view7"
+                    app:layout_constraintStart_toStartOf="@+id/tv_crack_unit"
+                    app:layout_constraintTop_toBottomOf="@+id/center_view6"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tv_etc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="비고내용입니다."
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/center_view7"
+                    app:layout_constraintStart_toStartOf="@+id/tv_position"
+                    app:layout_constraintTop_toBottomOf="@+id/center_view6"
+                    tools:ignore="HardcodedText" />
+
+                <View
+                    android:id="@+id/center_view7"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_margin="5dp"
+                    android:background="#A0A4A8"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_etc" />
+
+                <TextView
+                    android:id="@+id/tv_text8"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="작성 일자"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/center_view8"
+                    app:layout_constraintStart_toStartOf="@+id/tv_crack_unit"
+                    app:layout_constraintTop_toBottomOf="@+id/center_view7"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tv_updated_at"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="2022/06/22/00:00:00"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/center_view8"
+                    app:layout_constraintStart_toStartOf="@+id/tv_etc"
+                    app:layout_constraintTop_toBottomOf="@+id/center_view7"
+                    tools:ignore="HardcodedText" />
+
+                <View
+                    android:id="@+id/center_view8"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_margin="5dp"
+                    android:background="#A0A4A8"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_updated_at" />
+
+                <Button
+                    android:id="@+id/btn_back_content"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/circle_box_yellow"
+                    android:minHeight="35dp"
+                    android:paddingHorizontal="25dp"
+                    android:text="목록 보기"
+                    android:textColor="#E5923C"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/center_view8"
+                    tools:ignore="HardcodedText,RtlSymmetry" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/circle_box_rectangle_right"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="start"
+                    android:text="조사 망도"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <com.example.ascope_lite.CamTest_v01.DrawView
+                    android:id="@+id/graphicsView"
+                    android:layout_width="1080px"
+                    android:layout_height="1080px"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="50dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#C4E5E8"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btn_content_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:background="#C4E5E8"
+            android:drawablePadding="10dp"
+            android:outlineProvider="none"
+            android:paddingStart="10dp"
+            android:text="수정"
+            android:textAlignment="textStart"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:drawableStartCompat="@drawable/ic_enter"
+            tools:ignore="HardcodedText,RtlSymmetry" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#A0A4A8" />
+
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#A0A4A8" />
+
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:background="#C4E5E8"
+            android:drawablePadding="10dp"
+            android:outlineProvider="none"
+            android:paddingEnd="10dp"
+            android:text="삭제"
+            android:textAlignment="textEnd"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:drawableEndCompat="@drawable/ic_cancel"
+            tools:ignore="HardcodedText,RtlSymmetry" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

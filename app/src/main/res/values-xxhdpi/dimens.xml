@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--sample: s7 edge, zFlip4-->
+<resources>
+    <dimen name="login_screen_height">150dp</dimen>
+    <dimen name="login_sub_title_margin_bottom">10dp</dimen>
+    <dimen name="edt_id_margin">30dp</dimen>
+    <dimen name="edt_id_margin_top">20dp</dimen>
+    <dimen name="edt_pw_margin">30dp</dimen>
+    <dimen name="edt_pw_margin_top">10dp</dimen>
+    <dimen name="btn_login_margin">30dp</dimen>
+    <dimen name="btn_login_margin_top">20dp</dimen>
+    <dimen name="tv_corp_email_margin_bottom">25dp</dimen>
+    <dimen name="tv_copyright_margin_bottom">5dp</dimen>
+    <dimen name="edt_margin_conc">20dp</dimen>
+    <dimen name="edt_conc_etc">250dp</dimen>
+</resources>

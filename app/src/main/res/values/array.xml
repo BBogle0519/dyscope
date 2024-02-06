@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="conc_angle">
+        <item> 90 </item>
+        <item> 45 </item>
+        <item> 0 </item>
+        <item> -45 </item>
+        <item> -90 </item>
+    </string-array>
+
+    <string-array name="subjectPosition">
+        <item> 천장 </item>
+        <item> 천장(빔) </item>
+        <item> 천장(가더) </item>
+        <item> 바닥 </item>
+        <item> 벽면 </item>
+        <item> 벽면(기둥)</item>
+        <item> 기둥 </item>
+        <item> 창틀 </item>
+        <item> 외벽 </item>
+        <item> 기타 </item>
+    </string-array>
+
+    <string-array name="subject">
+        <item> 균열 </item>
+        <item> 재료분리 </item>
+        <item> 철근노출 </item>
+        <item> 박리 </item>
+        <item> 박락 </item>
+        <item> 백화 </item>
+        <item> 파손 </item>
+        <item> 기타 </item>
+    </string-array>
+
+    <string-array name="type">
+        <item> 전체 </item>
+        <item> 균열 및 외관 조사 </item>
+<!--        <item> 콘크리트 강도 조사 </item>-->
+<!--        <item> 철근 배근 조사 </item>-->
+<!--        <item> 부재 제원 조사 </item>-->
+<!--        <item> 기울기 조사 </item>-->
+<!--        <item> 탄산화 조사 </item>-->
+    </string-array>
+
+    <string-array name="kind">
+        <item> 균열 및 외관 조사 </item>
+<!--        <item> 부재 제원 조사 </item>-->
+<!--        <item> 콘크리트 강도 조사 </item>-->
+<!--        <item> 철근 배근 조사 </item>-->
+<!--        <item> 탄산화 조사 </item>-->
+<!--        <item> 기울기 조사 </item>-->
+    </string-array>
+
+    <string-array name="input_type">
+        <item> 폭, 길이 </item>
+        <item> 면적 </item>
+    </string-array>
+
+    <string-array name="zone">
+        <item> 외부 </item>
+        <item> 내부 </item>
+    </string-array>
+
+</resources>
